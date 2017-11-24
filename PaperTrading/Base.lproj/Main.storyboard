@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W40-mn-IXI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Xe6-oz-Bw8">
+            <objects>
+                <navigationController id="W40-mn-IXI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jIw-Td-Dbh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mEo-hU-a7O" kind="relationship" relationship="rootViewController" id="IHV-36-Xdd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="828-TO-X5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-478" y="99"/>
+        </scene>
+        <!--Live Stock Prices-->
+        <scene sceneID="HDQ-Il-8WW">
+            <objects>
+                <viewController storyboardIdentifier="LiveVC" id="mEo-hU-a7O" customClass="LiveVC" customModule="PaperTrading" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UrN-Rg-Rhc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-XC-gK8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LiveStockCell" rowHeight="80" id="hDz-nd-uq7" customClass="LiveStockCell" customModule="PaperTrading" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hDz-nd-uq7" id="hlL-yE-1i0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="ZUk-Cz-1e6">
+                                                    <rect key="frame" x="16" y="44" width="344" height="25"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb8-YX-g9Q">
+                                                    <rect key="frame" x="16" y="10" width="57" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ch6-RT-LLj">
+                                                    <rect key="frame" x="316" y="25" width="44" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZUk-Cz-1e6" firstAttribute="trailing" secondItem="hlL-yE-1i0" secondAttribute="trailingMargin" id="EHh-Xc-zcB"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZUk-Cz-1e6" secondAttribute="bottom" constant="0.5" id="UK4-hG-srq"/>
+                                                <constraint firstItem="Vb8-YX-g9Q" firstAttribute="leading" secondItem="hlL-yE-1i0" secondAttribute="leading" constant="16" id="VtS-54-OGy"/>
+                                                <constraint firstItem="Ch6-RT-LLj" firstAttribute="centerY" secondItem="hlL-yE-1i0" secondAttribute="centerY" id="aU1-YZ-t8a"/>
+                                                <constraint firstItem="Ch6-RT-LLj" firstAttribute="trailing" secondItem="hlL-yE-1i0" secondAttribute="trailingMargin" id="eHP-2d-qfX"/>
+                                                <constraint firstItem="ZUk-Cz-1e6" firstAttribute="top" secondItem="Vb8-YX-g9Q" secondAttribute="bottom" constant="5.5" id="fwt-sI-Sf9"/>
+                                                <constraint firstItem="Vb8-YX-g9Q" firstAttribute="top" secondItem="hlL-yE-1i0" secondAttribute="top" constant="10" id="jET-1r-gdv"/>
+                                                <constraint firstItem="ZUk-Cz-1e6" firstAttribute="leading" secondItem="hlL-yE-1i0" secondAttribute="leading" constant="16" id="rQA-oq-VON"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="companyLbl" destination="ZUk-Cz-1e6" id="2BF-Zo-uIq"/>
+                                            <outlet property="priceLbl" destination="Ch6-RT-LLj" id="ngQ-SO-AaE"/>
+                                            <outlet property="tickerLbl" destination="Vb8-YX-g9Q" id="31E-Mk-tlf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9dg-XC-gK8" firstAttribute="bottom" secondItem="B1K-vA-59F" secondAttribute="bottom" id="79O-4t-Kgb"/>
+                            <constraint firstItem="9dg-XC-gK8" firstAttribute="trailing" secondItem="B1K-vA-59F" secondAttribute="trailing" id="QlW-vf-YjF"/>
+                            <constraint firstItem="9dg-XC-gK8" firstAttribute="leading" secondItem="B1K-vA-59F" secondAttribute="leading" id="SYu-E5-hHJ"/>
+                            <constraint firstItem="9dg-XC-gK8" firstAttribute="top" secondItem="B1K-vA-59F" secondAttribute="top" id="lE1-RS-elM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B1K-vA-59F"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Live Stock Prices" id="CD4-ZK-YDw"/>
+                    <connections>
+                        <outlet property="tableView" destination="9dg-XC-gK8" id="Vkk-Wg-OqV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAp-mw-gd8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="261.60000000000002" y="98.50074962518741"/>
+        </scene>
+    </scenes>
+</document>
